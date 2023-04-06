@@ -1,17 +1,18 @@
 
 import { useState } from 'react';
 import axios from 'axios';
+import { apikey } from './variable';
 
 import {BsWind,BsFillDropletFill} from 'react-icons/bs'
 import {HiLocationMarker} from 'react-icons/hi'
 
 import './App.css';
 
-require('dotenv').config();
 
 
 
-const apiKey = process.env.API_KEY;
+
+const apiKey = apikey
 
 
 function App() {
@@ -32,18 +33,11 @@ if(e.key === 'Enter'){
     setData(res.data)
     console.log(data)
   })
-
   setLocation("")
 }
-   
-  
 }
-
-
-
- 
-    return (
-      <div className="App">
+      return (
+  <div className="App">
    <div className="container">
 
    <h3>confira o clima de uma cidade:</h3>
