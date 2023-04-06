@@ -15,11 +15,12 @@ body{
   align-items: center;
 }
 .container{
-  background-color: #5c54ed;
+ background-color: #5651b463;
   box-shadow: rgba(0, 0, 0, .44) 0px 3px 8px;
   padding: 2rem;
   color: #fdfdfd;
   border-radius: .4rem;
+  
 }
 
 .container h3{

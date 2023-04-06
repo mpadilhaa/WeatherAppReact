@@ -20,15 +20,11 @@ function App() {
 const [data, setData] = useState('');
 const [location, setLocation] = useState('');
 
-
-
-
-//fetch data
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric&lang=pt_br`;
 
 const searchLocation = (e) => {
  
-if(e.key === 'Enter'){
+  if(e.key === 'Enter'){
   axios.get(url).then((res) => {
     setData(res.data)
     console.log(data)
@@ -36,6 +32,17 @@ if(e.key === 'Enter'){
   setLocation("")
 }
 }
+
+
+
+//flags 
+
+
+
+//icon weather
+
+
+
       return (
   <div className="App">
    <div className="container">
@@ -61,14 +68,18 @@ if(e.key === 'Enter'){
     : null }
     </div>
 
+   
+
+    
+
     <div className="city-results">
     {data.main ? 
-    <p>{data.main.temp}</p> :
+    <h2>{data.main.temp} °C</h2> :
      null}
 
     <div className='weather'>
     {data.weather ? 
-    <h3>{data.weather[0].description}</h3> :
+    <h4>{data.weather[0].description}</h4> :
      null}
     
     </div>
